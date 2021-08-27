@@ -1,0 +1,40 @@
+{
+  "name": "if",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint-write": "eslint --debug",
+    "lint": "eslint main.js",
+    "lint:fix": "eslint main.js --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stackeevich/if-js.git"
+  },
+  "author": "Vlad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stackeevich/if-js/issues"
+  },
+  "homepage": "https://github.com/Stackeevich/if-js#readme",
+  "dependencies": {
+    "husky": "^7.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-react": "^7.24.0"
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "nmp run line:write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-comit": "lint-staged"
+    }
+  }
+}
