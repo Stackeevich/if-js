@@ -15,9 +15,10 @@ test = 1 + '1'
 test -= 1
 // 10
 console.log(test);
-var test = true ;
+Boolean (test)
+
 // true, if i write false in the console will output false
-console.log(test);
+console.log( Boolean (test) );
 
 // question 8 ----------------------------------------------------
 
