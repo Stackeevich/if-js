@@ -2,7 +2,7 @@
 var str = "qawseddesw"; //false  !!!  qawswaq - true
 function palindrome(str) {
     for (var i = 0, j = str.length - 1; i < j; i++, j--) {
-         if(str[i] != str[j])
+         if(str[i] !== str[j])
 // функция сравнивает посимвольно с начала и с конца и проверяем совпадают ли символы в слове
            return false;
     }
@@ -46,24 +46,28 @@ for(i=0;i<max_arr.length;i++) {
 console.log(max);
 
 // c исп. тернарного оператора. 6.3
-var minArr = [5.5, 3.2, 3, 2.2, 7, 4];
-var resultMin = minArr.reduce(function (a,b) {
-    return parseFloat(a) < parseFloat(b) ? a : b;
-});
-console.log(resultMin);
 
-var maxArr = [5.5, 3.2, 3, 2.2, 7, 4];
-var resultMax = maxArr.reduce(function (a,b) {
-    return parseFloat(a) > parseFloat(b) ? a : b;
-});
-console.log(resultMax);
+const numbers = [2, 4, 9, 2, 1.1, 0.9, 16, 24];
+
+
+
+const largest = numbers.reduce((previousValue, currentValue) =>
+            previousValue > currentValue ? previousValue : currentValue
+        );
+
+const smallest = numbers.reduce((previousValue, currentValue) =>
+            previousValue < currentValue ? previousValue : currentValue
+        );
+
+ console.log(largest);
+ console.log(smallest);        
 
 //  -----------------------------------    ex - 7    ---------------------------------------------------------------
-// честно долго искал как, нашел, разобрался 
+
 function replaceZero(number) {
     const numStr = `${number}`;
     if (numStr.includes('0')) {
-      return `${number}`.replaceAll('0', 'zero');
+      return numStr.replaceAll('0', 'zero');
     }
     return number;
   }
