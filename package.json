@@ -1,0 +1,28 @@
+{
+  "name": "if",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^7.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stackeevich/if-js.git"
+  },
+  "author": "Vlad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Stackeevich/if-js/issues"
+  },
+  "homepage": "https://github.com/Stackeevich/if-js#readme"
+}
