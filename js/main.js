@@ -1,5 +1,7 @@
 //  ----------------- ex №5 -----------------
 
+
+
 function sum(a){
     let x = a;
     return function(b){ return x + b;};
@@ -11,19 +13,28 @@ console.log(sum(5)(2));
 
 //  ----------------- ex №6 -----------------
 
-let colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
-let p_collect = document.getElementsByTagName('p');
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 
-let p1 = function() {
-	let k = 0;
-	return function() {
-		this.style.color = colors[k];
-		k++;
-		if (k == colors.length){k=0};
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
+
+const changeTextColor = () => {
+	let i = 0;
+
+	return function (event) {
+		event.target.style.color = colors[i];
+		i++;
+		if (i >= colors.length) {
+			i = 0;
+		}
 	}
 }
 
-for (let i = 0; i < p_collect.length; i++) {
-	p_collect[i].addEventListener('click', p1());
-}
+const changeColor1 = changeTextColor();
+const changeColor2 = changeTextColor();
+const changeColor3 = changeTextColor();
 
+text1.addEventListener('click', changeColor1);
+text2.addEventListener('click', changeColor2);
+text3.addEventListener('click', changeColor3);
