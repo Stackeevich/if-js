@@ -49,13 +49,23 @@ const data = [
     },
   ];
 
-let value = prompt ('Введите значение')
-let obj = Object.values(data);
-let result = obj.includes(value);
-console.log(obj);
+const searchCountryInfo = str => {
+	let res = [];
+	
+	for (let i = 0; i < data.length; i++) {
+		const currentInfo = `${data[i].country} ${data[i].city} ${data[i].hotel}`.toLowerCase();
+		
+		if (currentInfo.includes(str)) {
+			res.push(data[i]);
+		}
+	}
+	return res;
+}
+let searchValue = prompt('please type info').toLowerCase().trim();
+console.log(searchCountryInfo(searchValue));
 
 
+// const res = data.filter(item => Object.values(item).some(val => val.toLowerCase().trim().includes(searchValue)));
 
-
-
+// console.log(res);
 
