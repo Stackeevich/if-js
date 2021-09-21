@@ -1,12 +1,13 @@
 //  --------------------- ex 5 ---------------------
 
 function isPalindrome(a) {
-  return a == a.split("").reverse().join("");
+  return a === a.split("").reverse().join("");
 }
 console.log(isPalindrome("qwerttrewq")); // true
 console.log(isPalindrome("trtrtrtr")); // false
 console.log(isPalindrome("ifkfi")); // true
 console.log(isPalindrome("lkjhg")); // false
+
 //  --------------------- ex 6 ---------------------
 const hotels = [
 
@@ -167,10 +168,22 @@ const hotels = [
     },
   ];
 
-let searchValue = prompt('please type info').toLowerCase().trim();
+const searchValue = prompt('please type info').toLowerCase().trim();
 const res = hotels.filter(item => Object.values(item).some(val => val.toLowerCase().trim().includes(searchValue)));
 
 console.log(res)
 
 //--------------------- ex 7 ---------------------
 
+const result = hotels.reduce((acc, item) => {
+  const res = {...acc};
+
+  if (!res[item.country]) {
+      res[item.country] = [];
+  }
+  if (!res[item.country].includes(item.city)) {
+      res[item.country].push(item.city);
+  }
+  return(res);
+}, {});
+console.log(result);
