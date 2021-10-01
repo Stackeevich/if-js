@@ -1,71 +1,37 @@
-// ------------------- ex 5 -------------------
+//  ----------------- ex №5 -----------------
+function sum(a) {
+	return function(b) {
+		return a + b;
+	}
+}
+	console.log(sum(5)(2));
 
-let i ='2020-11-26';
-let date = i.split('T');
-console.log(date[0].split('-').reverse().join('.'))
+// module.exports = sum; 
 
-// ------------------- ex 6 -------------------
+//  ----------------- ex №6 -----------------
 
-const data = [
-    {
-      country: 'Russia',
-      city: 'Saint Petersburg',
-      hotel: 'Hotel Leopold',
-    },
-    {
-      country: 'Spain',
-      city: 'Santa Cruz de Tenerife',
-      hotel: 'Apartment Sunshine',
-    },
-    {
-      country: 'Slowakia',
-      city: 'Vysokie Tatry',
-      hotel: 'Villa Kunerad',
-    },
-    {
-      country: 'Germany',
-      city: 'Berlin',
-      hotel: 'Hostel Friendship',
-    },
-    {
-      country: 'Indonesia',
-      city: 'Bali',
-      hotel: 'Ubud Bali Resort&SPA',
-    },
-    {
-      country: 'Netherlands',
-      city: 'Rotterdam',
-      hotel: 'King Kong Hostel',
-    },
-    {
-      country: 'Marocco',
-      city: 'Ourika',
-      hotel: 'Rokoko Hotel',
-    },
-    {
-      country: 'Germany',
-      city: 'Berlin',
-      hotel: 'Hotel Rehberge Berlin Mitte',
-    },
-  ];
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 
-const searchCountryInfo = str => {
-	let res = [];
-	
-	for (let i = 0; i < data.length; i++) {
-		const currentInfo = `${data[i].country} ${data[i].city} ${data[i].hotel}`.toLowerCase();
-		
-		if (currentInfo.includes(str)) {
-			res.push(data[i]);
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
+
+const changeTextColor = () => {
+	let i = 0;
+
+	return function (event) {
+		event.target.style.color = colors[i];
+		i++;
+		if (i >= colors.length) {
+			i = 0;
 		}
 	}
-	return res;
 }
-let searchValue = prompt('please type info').toLowerCase().trim();
-console.log(searchCountryInfo(searchValue));
 
+const changeColor1 = changeTextColor();
+const changeColor2 = changeTextColor();
+const changeColor3 = changeTextColor();
 
-// const res = data.filter(item => Object.values(item).some(val => val.toLowerCase().trim().includes(searchValue)));
-// let searchValue = prompt('please type info').toLowerCase().trim();
-// console.log(res);
-
+text1.addEventListener('click', changeColor1);
+text2.addEventListener('click', changeColor2);
+text3.addEventListener('click', changeColor3);
