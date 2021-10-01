@@ -25,9 +25,9 @@ const studentsData = [
   },
 ];
 class User {
-  constructor(options) {
-    this.firstName = options.firstName;
-    this.lastName = options.lastName;
+  constructor(val) {
+    this.firstName = val.firstName;
+    this.lastName = val.lastName;
   }
   get fullName() {
     return `${this.firstName} ${this.lastName}`;
@@ -35,10 +35,10 @@ class User {
 }
 
 class Student extends User {
-  constructor(options) {
-    super(options);
-    this.admissionYear = options.admissionYear;
-    this.courseName = options.courseName;
+  constructor(val) {
+    super(val);
+    this.admissionYear = val.admissionYear;
+    this.courseName = val.courseName;
   }
   get course() {
     return new Date().getFullYear() - this.admissionYear;
