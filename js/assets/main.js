@@ -31,7 +31,7 @@ const obj3 = {
 
 const deepEqual = (object1, object2) => {
 
-      let arr1 = Object.keys(obj1),
+      const arr1 = Object.keys(obj1),
           arr2 = Object.keys(obj2);
    
       for (let key of arr1) {
