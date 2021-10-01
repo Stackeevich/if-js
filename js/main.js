@@ -1,15 +1,11 @@
 //  ----------------- ex №5 -----------------
 
-
-
-function sum(a){
-    let x = a;
-    return function(b){ return x + b;};
+function sum(a) {
+	return function(b) {
+		return a + b;
+	}
 }
-
-console.log(sum(5)(2));
-
-// module.exports = sum; 
+	console.log(sum(5)(2));
 
 //  ----------------- ex №6 -----------------
 
