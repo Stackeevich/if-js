@@ -62,8 +62,3 @@ const searchCountryInfo = str => {
 }
 let searchValue = prompt('please type info').toLowerCase().trim();
 console.log(searchCountryInfo(searchValue));
-
-
-// const res = data.filter(item => Object.values(item).some(val => val.toLowerCase().trim().includes(searchValue)));
-// let searchValue = prompt('please type info').toLowerCase().trim();
-// console.log(res);
