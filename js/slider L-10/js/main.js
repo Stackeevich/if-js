@@ -114,7 +114,7 @@ function hotelsItem(arr) {
       <img src="${item.imageUrl}" alt="${item.name}">
       <div class="favorite-item__title">${item.name}</div>
       <div class="favorite-item__descr">${item.city}, ${item.country}</div>`;
-    homesInfoPanel.append(hotelsItem);
+    hotelsInfoPanel.append(hotelsItem);
   });
 }
 
