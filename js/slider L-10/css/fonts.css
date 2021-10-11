@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Regular'), local('Roboto-Regular'),
+		url('../fonts/Roboto-Regular.woff2') format('woff2'),
+		url('../fonts/Roboto-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: local('Roboto Medium'), local('Roboto-Medium'),
+		url('../fonts/Roboto-Medium.woff2') format('woff2'),
+		url('../fonts/Roboto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?au9wxj');
+	src: url('../fonts/icomoon.eot?au9wxj#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?au9wxj') format('truetype'),
+		url('../fonts/icomoon.woff?au9wxj') format('woff'),
+		url('../fonts/icomoon.svg?au9wxj#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-thin-right:before {
+	content: "\e901";
+}
+
+.icon-chevron-thin-left:before {
+	content: "\e900";
+}
