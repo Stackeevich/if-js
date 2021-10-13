@@ -105,7 +105,7 @@ const data = [
   },
 ];
 
-const homesInfoPanel = document.querySelector(".favorite-wrapper");
+const hotelsInfoPanel = document.querySelector(".favorite-wrapper");
 
 function hotelsItem(arr) {
   arr.map((item) => { const hotelsItem = document.createElement("div");
