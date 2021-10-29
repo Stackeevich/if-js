@@ -1,20 +1,4 @@
-(function ($) {
-  $(function () {
-    $("ul.tabs__items").on("click", "li:not(.tabs__item-active)", function () {
-      $(this)
-        .addClass("tabs__item-active")
-        .siblings()
-        .removeClass("tabs__item-active")
-        .closest("div.container")
-        .find("div.tabs__content")
-        .removeClass("tabs__content-active")
-        .eq($(this).index())
-        .addClass("tabs__content-active");
-    });
-  });
-})(jQuery);
-
-$(document).ready(function () {
+function loadSlider() {
   $(".slick__wrapper").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -44,12 +28,11 @@ $(document).ready(function () {
       },
     ],
   });
-});
-
+}
 
 const guestSectionMaker = document.querySelector('#home-sectoin-content');
 
-const pushFetchData = (data) => {
+function pushFetchData (data) {
     if(data.length !== 0) {
         data.forEach((elem) => {
             guestSectionMaker.innerHTML += `
@@ -62,19 +45,18 @@ const pushFetchData = (data) => {
         </div>
     `;
         })}
+    loadSlider()
 };
 
-const sessionStorageCheck = () => {
-    if (sessionStorage.getItem('hotels-data-item')) {
-        const data = JSON.parse(sessionStorage.getItem('hotels-data-item'));
-        console.log(data);
-        pushFetchData(data);
-    } else {
-        fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
-            .then(response => response.json())
-            .then(data => sessionStorage.setItem('hotels-data-item', JSON.stringify(data)))
-            .catch(err => console.log('This is error', err));
-    }
+const sessionStorageCheck = async () => {
+    const res = await getData()
+    pushFetchData(res);
 };
 
 sessionStorageCheck()
+
+async function getData () {
+    const response = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
+    const result = await response.json()
+    return result
+}

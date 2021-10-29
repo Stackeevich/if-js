@@ -131,6 +131,11 @@ button {
   max-height: 301px;
 }
 
+.favorite-item-box {
+  width: 100%;
+  display: inline-block;
+}
+
 .photo {
   width: 300px;
   height: 300px;
@@ -138,10 +143,12 @@ button {
   object-position: center;
 }
 
-.favorite-item__img {
+.favorite-item__img .favorite-wrapper{
   overflow: hidden;
   position: relative;
-  /* padding: 0px 0px 100% 0px; */
+}
+.slick-slide img {
+	display: block;
 }
 
 .favorite-item__img img {
