@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css/style1.css">
+</head>
+<body>
+<div class="all-flex">
+    <header>
+      <div class="container">
+        <div class="header__logo-nav">
+          <div class="header__logo">
+            <svg class="header__svg-logo">
+              <use href="image/head.svg#TripHouse"/>
+            </svg>
+          </div>
+          <nav class="header__nav">
+            <a href="#" class="header__nav-stays">Stays</a>
+            <a href="#" class="header__nav-attractions">Attractions</a>
+            <a href="#" class="header__nav-night">
+              <svg class="nav__svg-night">
+                <use href="image/head.svg#night"/>
+              </svg>
+            </a>
+            <a href="#" class="header__nav-account">
+              <svg class="nav__svg-account">
+                <use href="image/head.svg#accountCircle"/>
+              </svg>
+            </a>
+            <a href="#" class="header__nav-burger">
+              <svg class="nav__svg-burger">
+                <use href="image/head.svg#menu"></use>
+              </svg>
+            </a>
+          </nav>
+        </div>
+        <div class="header__top-section">
+          <h1>Discover stays <br> to live, work or just relax</h1>
+          <form class="header__form" id="form-destination">    
+            <div class="header__input-place-block">
+              <svg class="header__svg-magnifier">
+                <use href="image/head.svg#magnifier"/>
+              </svg>
+              <label for="place" class="label">Your destination or hotel name</label>
+              <input class="header__input input-place " id="place" type="text" placeholder="New York" name="destinationOrHotel">
+            </div>
+            <div class="header__input-date-block">
+              <p class="header__input input-date" id="chose-date" type="text">Check-in — Check-out</p>
+                <div class="header__calendar-block header__display-none" id="calendar-block">
+                  <div class="header__first-month" id="first-month-calendar">
+                    <div class="header__name-of-month"></div>
+                    <div class='header__name-day-of-week'>
+                      <div>
+                        <p class="header__day-of-week">Mo</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Tu</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">We</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Th</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Fr</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Sa</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Su</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__second-month" id="second-month-calendar">
+                    <img class="header__calendar-left header__display-none" id="second-month-calendar-left" src="./image/arrow-slider.svg" alt="right-left">
+                    <img class="header__calendar-right" id="second-month-calendar-right" src="./image/arrow-slider.svg" alt="right-left">
+                    <div class="header__name-of-month"></div>
+                    <div class='header__name-day-of-week'>
+                      <div>
+                        <p class="header__day-of-week">Mo</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Tu</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">We</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Th</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Fr</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Sa</p>
+                      </div>
+                      <div>
+                        <p class="header__day-of-week">Su</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="header__mobile-input-date-block">
+              <div class="header__mobile-date">
+                <label for="date-in" class="label-date"></label>
+                <input class="header__input-mobile-date" id="date-in" type="text" placeholder="Check-in date"/>
+              </div>
+              <div class="header__mobile-date">
+                <label for="date-out" class="label-date"></label>
+                <input class="header__input-mobile-date" id="date-out" type="text" placeholder="Check-out date"/>
+              </div>
+            </div>
+            <div class="header__input-adults-block" id="peopleFilter">
+              <p class="header__input input-adults" id="Adults-Children-Room">2 Adults - 0 Children - 1 Room</p>
+              <div class="header__filter-people header__display-none" id="filter-people">
+                <div class="header__filter__counters">
+                  <div class="header__filter__adults">
+                    <p>Adults</p>
+                    <div class="header__filter__counter">
+                      <p id="minus-adults">&ndash;</p>
+                      <p class="header__adults__quantity__js">2</p>
+                      <p id="plus-adults">&plus;</p>
+                    </div>
+                  </div>
+                  <div class="header__filter__children">
+                    <p>Children</p>
+                    <div class="header__filter__counter">
+                      <p class="header__no-activity" id="minus-children">&ndash;</p>
+                      <p>0</p>
+                      <p id="plus-children">&plus;</p>
+                    </div>
+                  </div>
+                  <div class="header__filter__room">
+                    <p>Room</p>
+                    <div class="header__filter__counter">
+                      <p id="minus-room">&ndash;</p>
+                      <p>1</p>
+                      <p id="plus-room">&plus;</p>
+                    </div>
+                  </div>
+                </div>
+                <div  id='header__childs-age' class="header__filter-childrens-age header__display-none">
+                  <p id="children">What is the age of the child you’re <br> travelling with?</p>      
+                </div>
+              </div>
+            </div>
+            <div class="header__mobile-accommodation-block">
+              <div class="header__mobile-adults">
+                <label for="adults" class="label-accommodation">2</label>
+                <input class="header__input-mobile-accommodation" id="adults" type="text" placeholder="Adults" />
+              </div>
+              <div class="header__mobile-children">
+                <label for="children" class="label-accommodation">0</label>
+                <input class="header__input-mobile-accommodation" id="children" type="text" placeholder="Children" />
+              </div>
+              <div class="header__mobile-rooms">
+                <label for="rooms" class="label-accommodation">1</label>
+                <input class="header__input-mobile-accommodation" id="rooms" type="text" placeholder="Rooms" />
+              </div>
+            </div>
+            <div class="header__input-button-block">
+              <input class="header__input input-button" type="submit" value="Search">
+            </div>
+          </form>
+          <div class="header__market">
+            <a href="https://play.google.com/store"><img class="google-apple-image" src="./image/google-play-badge.svg" alt="Googleplay"></a>
+            <a href="https://www.apple.com/store"><img class="google-apple-image" src="./image/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917-1.svg" alt="App Store"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+   
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
