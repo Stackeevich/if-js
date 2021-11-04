@@ -32,7 +32,7 @@ function loadSlider() {
 
 const guestSectionMaker = document.querySelector('#home-sectoin-content');
 
-function pushFetchData (data) {
+const pushFetchData = (data) => {
     if(data.length !== 0) {
         data.forEach((elem) => {
             guestSectionMaker.innerHTML += `
@@ -45,18 +45,18 @@ function pushFetchData (data) {
         </div>
     `;
         })}
-    loadSlider()
+    loadSlider();
 };
 
 const sessionStorageCheck = async () => {
-    const res = await getData()
+    const res = await getData();
     pushFetchData(res);
 };
 
-sessionStorageCheck()
+sessionStorageCheck();
 
 async function getData () {
     const response = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
-    const result = await response.json()
-    return result
+    const result = await response.json();
+    return result;
 }
