@@ -14,7 +14,4 @@ const sendFile = async(event) => {
   }
 };
 
-sendFileForm.addEventListener('submit', sendFile)
-
-
-console.log(this);
+sendFileForm.addEventListener('submit', sendFile);
