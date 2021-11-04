@@ -1,0 +1,564 @@
+@import url(./font.css);
+
+:root {
+  --primary: #3077c6;
+  --primary-dark: #10367c;
+  --secondary: #f5bd41;
+  --white: #ffffff;
+  --primary-text: #383838;
+  --secondary-text: #bfbfbf;
+  --stroke-color: #F3F3F4;
+  --gray100: #121212;
+  --gray200: #1d1e1f;
+  --gray300: #4d4d4d;
+  --background-gray: #eaf0f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;  
+}
+
+.all-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container {
+  width: 1232px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1232px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+
+/*header*/
+
+header {
+  background-color: var(--primary-dark);
+  background-image: url(../image/castelmezzano-1979546\ 1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.header__logo-nav {
+  padding-top: 51px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__svg-logo {
+  width: 205px;
+  height: 40px;
+}
+
+.header__nav {
+  width: 343px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-stays {
+  position: relative;
+}
+
+.header__nav-stays::after{
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 50px;
+  height: 4px;
+  margin: 6px 4px;
+  background-color: var(--secondary);
+}
+
+.header__nav-stays,.header__nav-attractions {
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.header__nav-night {
+  display: block;
+  padding-left: 24px;
+}
+
+.nav__svg-night {
+  width: 30px;
+  height: 30px;
+}
+
+.header__nav-account {
+  display: block;
+}
+
+.nav__svg-account {
+  width: 40px;
+  height: 40px;
+  fill: var(--white);
+}
+
+.header__nav-burger {
+  display:none;
+}
+
+.nav__svg-burger {
+  width: 16px;
+  height: 24px;
+}
+
+.header__top-section {
+  margin-top: 200px;
+  margin-bottom: 150px;
+}
+
+h1 {
+  width: 542px;
+  font-size: 46px;
+  line-height: 59px;
+  color: var(--white);
+}
+
+.header__form {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin: 145px 0 120px 0;
+}
+
+.header__input-place-block {
+  flex-basis: 39%;
+  position: relative;
+}
+
+.header__svg-magnifier {
+  display: none;
+}
+
+.header__input-date-block {
+  flex-basis: 21%;
+  position: relative;
+}
+
+.header__calendar-block {
+  display: flex;
+  position: absolute;
+  width: 580px;
+  height: 292px;
+  background-color: var(--white);
+  top: 75px;
+  border-radius: 8px;
+  
+}
+
+.header__first-month, .header__second-month {
+  border-radius: 8px;
+  width: 290px;
+  height: 272px;
+  margin: 0 22px 18px 22px;
+}
+
+.header__first-month div, .header__second-month div {
+  display: flex;
+  justify-content: center;
+}
+
+.header__name-of-month {
+  margin: 12px 0 11px 0;
+}
+
+.header__month-year {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header__second-month {
+  position: relative;
+}
+
+.header__calendar-right, .header__calendar-left {
+  position: absolute;
+  height: 6px;
+  top: 18px;
+  cursor: pointer;
+}
+
+.header__calendar-right {
+  transform: rotate(270deg);
+  right: 30px;
+}
+
+.header__calendar-left {
+  transform: rotate(90deg);
+  left: 30px;
+}
+
+.header__name-day-of-week div,
+.header__countday-of-week,
+.header__countday-of-week-none {
+  width: 35px;
+  height: 35px;
+  align-items: center;
+}
+
+.header__day-of-week, .header__countday-of-week {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 35px;
+  text-align: center;
+  color: var(--gray300);
+  cursor: pointer;
+}
+
+.header__number-of-days,
+.header__number__two__of__days__js {
+  flex-direction:column;
+}
+
+.background-color__date,
+.background__color__date__end__js {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.background-color__intermediate-dates {
+  background-color: var(--secondary-text);
+}
+
+.header__input-adults-block {
+  flex-basis: 26%;
+  position: relative;
+}
+
+.header__filter-people {
+  position: absolute;
+  width: 82%;
+  top: 75px;
+  right: 0px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
+.header__filter__counters {
+  height: 114px;
+  margin: 22px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+}
+
+.header__filter__adults,
+.header__filter__children,
+.header__filter__room {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__filter__adults p,
+.header__filter__children p,
+.header__filter__room p {
+  font-size: 16px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.header__filter__counter {
+ display: flex;
+ justify-content: space-between;
+ width: 108px;
+}
+
+.header__filter__counter p:first-of-type, .header__filter__counter p:last-of-type {
+  border: 1px solid var(--primary);
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--primary);
+  text-align: center;
+  cursor: pointer;
+}
+
+#minus-adults.header__no-activity,
+#plus-adults.header__no-activity,
+#minus-children.header__no-activity,
+#plus-children.header__no-activity,
+#minus-room.header__no-activity,
+#plus-room.header__no-activity{
+  border: 1px solid var(--secondary-text);
+  color: var(--secondary-text);
+}
+
+.header__display-none,
+.header__filter-people .header__display-none {
+  display: none;
+}
+
+.header__filter-childrens-age {
+  margin: 28px 22px 22px 19px;
+}
+
+.header__filter-childrens-age p {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.header__filter-childrens-age select {
+  border: 1px solid var(--primary);
+  font-size: 12px;
+  line-height: 14px;
+  margin: 12px 4px 0 4px;
+  width: 99px;
+  height: 30px;
+}
+
+
+.header__input-button-block {
+  flex-basis: 16%;
+}
+
+.header__input {
+  padding: 0 25px 0 25px;
+  border-radius: 5px;
+  width: 100%;
+  height: 64px;
+  border: none;
+  outline: none;
+}
+
+.input-place,.input-date,.input-adults {
+  font-size: 18px;
+  line-height: 64px;
+  color: var(--primary-text);
+}
+
+.header__input-border {
+  border: 3px solid var(--secondary);
+}
+
+.input-place:focus,.input-date:focus {
+  border: 3px solid var(--secondary);
+}
+
+.label {
+  position: absolute;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--white);
+  margin-left: 20px;
+  bottom: 87px;
+
+}
+
+.input-button {
+  background-color: var(--primary);
+  font-style: medium;
+  font-size: 24px;
+  line-height: 28px;
+  line-height: 100%;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.header__mobile-input-date-block,
+.header__mobile-accommodation-block {
+  display: none;
+}
+
+.header__market {
+  display: flex;
+  justify-content: center;
+}
+
+.google-apple-image {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 1120px){
+  .header__svg-logo {
+    width: 121.92px;
+    height: 24px;
+  }
+  .header__nav-stays,.header__nav-attractions{
+    font-size: 16px;
+  }
+  .nav__svg-night {
+    width: 16px;
+    height: 16px;
+  }
+  .nav__svg-account {
+    width: 24px;
+    height: 24px;
+  }
+  .header__nav {
+    width: 250px;
+  }
+  .header__nav-stays::after{
+    width: 33px;
+    height: 3px;
+  }
+  .header__top-section {
+    margin-top: 52px;
+    margin-bottom: 32px;
+  }
+  h1 {
+    width: 328px;
+    font-size: 27px;
+    line-height: 35px;
+  }
+  .header__form {
+    background-color: var(--secondary);
+    margin: 32px 0;
+    flex-direction: column;
+  }
+  .header__input {
+    height: 48px;
+  }
+    .input-place::placeholder {
+    color: var(--white);
+  }
+  .label {
+    bottom: 12px;
+    left: 8px;
+    color: var(--primary-text);
+    font-weight: 550;
+    font-size: 15px;
+  }
+  .header__input-place-block {
+    height: 48px;
+    position: relative;
+    margin: 8px 8px 0 8px;
+  }
+  .header__svg-magnifier {
+    position: absolute;
+    display: inline;
+    width: 16px;
+    height: 16px;
+    bottom: 15px;
+    margin-left: 8px;
+  }
+  .header__input-date-block,.input-date,.header__input-adults-block,.input-adults {
+    display: none;
+  }
+  .header__mobile-input-date-block,.header__mobile-accommodation-block {
+    display: inline;
+    display: flex;
+  }
+  .header__mobile-input-date-block{
+    margin-left: 8px;
+  }
+  .header__mobile-date{
+    position: relative;
+    flex-basis: 50%;
+    margin: 8px 8px 8px 0;
+  }
+  .header__input-mobile-date::placeholder, .header__input-mobile-accommodation::placeholder {
+    position: relative;
+    left: 6px;
+    bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .header__input-mobile-date {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+  .label-date,.label-accommodation {
+    position: absolute;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+    color: var(--primary-text);
+    bottom: 2px;
+    left: 5px;
+  }
+  .header__mobile-accommodation-block{
+    margin:0 8px 8px 8px;
+    background-color: var(--white);
+    border-radius: 8px;
+  }
+
+  .header__mobile-adults,.header__mobile-children,.header__mobile-rooms {
+    flex-basis: 33.33%;
+    position: relative;
+  }
+
+  .header__mobile-adults::after,.header__mobile-children::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 1px;
+    height: 32px;
+    background-color: var(--secondary-text);
+    right: 6px;
+    top: 7px;
+  }
+
+
+  .header__input-mobile-accommodation {
+    width: 100%;
+    height: 48px;
+    border:none;
+    outline: none;
+    border-radius: 8px;
+  }
+  .input-button {
+    height: 48px;
+  }
+  .header__input-button-block{
+    max-width: 360px;
+    width: 100%;
+    padding: 0 8px 8px 8px;
+    margin: 0 auto;
+  }
+  .header__form {
+    margin-bottom: 32px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .header__svg-logo {
+    width: 121.92px;
+    height: 24px;
+  }
+  .header__nav-burger {
+    display: inline;
+  }
+  .header__nav-stays,.header__nav-attractions{
+    display: none;
+  }
+  .header__nav {
+    width: 96px;
+  }
+  .header__nav-night {
+    padding-left: 0;
+  }
+}
