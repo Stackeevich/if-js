@@ -78,8 +78,6 @@ const takeFormValue = (event) => {
 
 formEl.addEventListener('submit', takeFormValue);
 
-// Сортировка пузырьком секции Homes guests loves
-
 function loadSlider() {
   $(".slick__wrapper").slick({
     slidesToShow: 4,
