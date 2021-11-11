@@ -42,10 +42,10 @@ const takeFormValue = (event) => {
     if (data.length !== 0) {
       data.forEach((elem) => {
         availHotelsContentDiv.innerHTML += `
-        <div class="avail-hotels-box box">
-          <a href="#" class="avail-hotels-photo-link">
-            <img class="avail-hotels-photo photo" src=${elem.imageUrl} alt="hotel_leopold">
-          </a>
+        <div class="favorite-item box">
+        <a href="#" class="avail-hotels-photo-link">
+        <img class="avail-hotels-photo photo" src=${elem.imageUrl} alt="hotel_leopold">
+      </a>
           <p class="home-hotel-name home-text"><a href="#">${elem.name}</a></p>
           <p class="home-destination home-text"><a href="#">${elem.city}, ${elem.country}</a></p>
         </div>
