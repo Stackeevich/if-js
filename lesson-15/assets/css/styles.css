@@ -453,13 +453,11 @@ input {
     width: 40px;
     left: -16px;
     top: 29%;
-    transform: rotate(
-            180deg
-    );
+    transform: rotate( 180deg );
 }
 
 .home-switcher-right {
-    width: 2400px;
+    width: 40px;
     left: 40px;
     top: 31%;
 }
@@ -533,7 +531,7 @@ h2 {
     border: none;
     border-radius: 100%;
     position: absolute;
-    background: url(assets/css/img/icons/arrowNext.svg) center center/auto no-repeat;
+    background: url(/assets/css/img/icons/arrowNext.svg) center center/auto no-repeat;
     background-color: #f3f3f4;
     right: -10px;
     top: 40%;
@@ -543,7 +541,7 @@ h2 {
   
   .slick-arrow:hover {
     cursor: pointer;
-    background: url(assets/css/img/icons/arrowNext.svg) center center/auto no-repeat;
+    background: url(/assets/css/img/icons/arrowNext.svg) center center/auto no-repeat;
     background-color: #7dabdf;
     -webkit-transition: ease-in 0.2s;
     transition: ease-in 0.2s;
