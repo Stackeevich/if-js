@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson-15</title>
+  <link href="assets/css/styles.css" rel="stylesheet">
+  <link href="assets/css/slick.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+
+  <div class="header-big-container">
+
+    <div class="header-big-upper">
+      <a href="#">
+        <svg class="image">
+          <use href="assets/css/img/sprite.svg#logo-vector"/>
+        </svg>
+      </a>
+
+      <nav class="header-nav">
+        <div class="header-nav-words">
+          <a href="#">
+            <span id="stays" class="word">Stays</span>
+          </a>
+          <a href="#">
+            <span id="attractions" class="word">Attractions</span>
+          </a>
+        </div>
+        <div class="header-nav-icons">
+          <a href="#">
+            <svg class="icon-night">
+              <use href="assets/css/img/sprite.svg#icon-night"/>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon-account">
+              <use href="assets/css/img/sprite.svg#icon-account"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <nav class="header-nav-adapt">
+        <a href="#">
+          <svg class="icon-night icon">
+            <use href="assets/css/img/sprite.svg#icon-night"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="icon-account icon">
+            <use href="assets/css/img/sprite.svg#icon-account"/>
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="menu-icon icon">
+            <use href="assets/css/img/sprite.svg#menu-icon"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <p class="search-title">Discover stays<br>to live, work or just relax</p>
+
+    <div class="search-section">
+      <form class="search-form">
+        <div class="search-form__group destination">
+          <svg class="loupe-icon destination__loupe-icon">
+            <use href="assets/css/img/sprite.svg#loupe-icon"/>
+          </svg>
+          <input type="text" name="destination" id="destination" class="destination__input" placeholder=" " required>
+          <label for="destination" class="destination__label">Your destination or hotel name</label>
+        </div>
+        <div class="search-form__group check">
+          <input type="text" class="check__input" name="check-in" id="check-in" placeholder=" ">
+          <label for="check-in" class="check__label">Check-in</label>
+          <input type="text" class="check__input" name="check-out" id="check-out" placeholder=" ">
+          <label for="check-out" class="check__label">Check-out</label>
+          <label for="check-in" class="check__label check__label--desktop">Check-in — Check-out</label>
+        </div>
+        <div class="search-form__group related">
+                    <span class="guests_count">
+                    <span id="adults">&nbsp;&nbsp;1 Adult</span>
+                    <span id="children">&nbsp;—&nbsp;0 Children</span>
+                    <span id="rooms">&nbsp;—&nbsp;1 Room</span>
+                </span>
+
+        </div>
+        <button type="submit" value="Search" class="submit-button">Search</button>
+      </form>
+      <div class="filter-hidden filter-related">
+
+        <div class="filter-related-bigCont">
+
+          <div class="filter-related-cont">
+
+            <p class="filter-related-text">Adults</p>
+            <div class="filter-related-change-cont">
+              <div id="changeMinusAdults" class="filter-disabled filter-related-change">
+                <p id="changeDisabledMinusAdults" class="change-disabled change">-</p>
+              </div>
+              <p id="numberAdults" class="filter-related-text">1</p>
+              <div id="changePlusAdults" class="filter-related-change">
+                <p id="changeDisabledPlusAdults" class="change">+</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-related-cont">
+            <p class="filter-related-text">Children</p>
+            <div class="filter-related-change-cont">
+              <div id="changeMinusChildren" class="filter-disabled filter-related-change">
+                <p id="changeDisabledMinusChildren" class="change-disabled change">-</p>
+              </div>
+              <p id="numberChildren" class="filter-related-text">0</p>
+              <div id="changePlusChildren" class="filter-related-change">
+                <p id="changeDisabledPlusChildren" class="change">+</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-related-cont">
+            <p class="filter-related-text">Rooms</p>
+            <div class="filter-related-change-cont">
+              <div id="changeMinusRooms" class="filter-disabled filter-related-change">
+                <p id="changeDisabledMinusRooms" class="change-disabled change">-</p>
+              </div>
+              <p id="numberRooms" class="filter-related-text">1</p>
+              <div id="changePlusRooms" class="filter-related-change">
+                <p id="changeDisabledPlusRooms" class="change">+</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="filter-hidden filter-related-quest">What is the age of the child you are travelling
+            with?</p>
+
+          <div class="filter-hidden filter-age">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="header__market">
+      <a href="https://play.google.com/store"><img class="google-apple-image" src="assets/css/img/google-play-badge.svg" alt="Googleplay"></a>
+      <a href="https://www.apple.com/store"><img class="google-apple-image" src="assets/css/img/app-store-badge.svg" alt="App Store"></a>
+    </div>
+  </div>
+
+</header>
+
+<section class="avail-hotels filter-hidden">
+  <div class="avail-hotels-container">
+    <h2>Available Hotels</h2>
+
+    <div id="avail-hotels-content" class="avail-hotels-gallery gallery"></div>
+  </div>
+
+</section>
+
+<p id="avail-not" class="filter-hidden">Sorry, there is no place on your request</p>
+
+<section class="favorite">
+  <div class="container">
+    <h2>Homes guests loves</h2>
+
+    <div id="home-sectoin-content" class="favorite-wrapper slick__wrapper">
+      
+    </div>
+  </div>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/slick.js"></script> 
+<script src="assets/js/main.js"></script>
+</body>
+</html>
