@@ -51,7 +51,6 @@ const pushFetchData = (data) => {
 const sessionStorageCheck = () => {
     if (sessionStorage.getItem('homes-data')) {
         const data = JSON.parse(sessionStorage.getItem('homes-data'));
-        console.log(data);
         pushFetchData(data);
     } else {
         fetch('https://fe-student-api.herokuapp.com/api/hotels/popular')
