@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>lesson-32</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main__wrapper">
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="index.html" class="header__logo-link"></a>
+                    </div>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="#" class="header__link" autofocus>Stays</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#" class="header__link">Attractions</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#"></a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#"></a>
+                            </li>
+                            <li class="header__burger">
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <h1 class="main__title">
+                Discover stays
+                <br>
+                to live, work or just relax
+            </h1>
+            <form action="" class="form__desktop">
+                <div class="input__lable">
+                    <label for="search">Your destination or hotel name</label>
+                    <label for="in">Check-in-</label>
+                    <label for="out">Check-out</label>
+                </div>
+                <section class="form-desktop__wrapper">
+                    <div class="sbar__first">
+                        <input id="search" type="text" name="search" placeholder="New-York">
+                    </div>
+                    <div class="sbar__second">
+                        <div>
+                            <input type="date" id="in">
+                            <input type="date" id="out">
+                        </div>
+                    </div>
+                    <div class="sbar__third">
+                        <input type="text" name="filter" class="people-picker" placeholder="">
+                    </div>
+                    <button id="sendForm" type="submit">Search</button>
+                </section>
+                <div class="form-desktop-people__picker">
+                    <div class="picker__adults">
+                        <span>
+                            <label for="adults">Adults</label>
+                        </span>
+                        <div class="picker-people_count">
+                            <button class="minus" value="-">-</button>
+                            <input id="adults" type="text" value="0" min="0" max="30">
+                            <button class="plus" value="+">+</button>
+                        </div>
+                    </div>
+                    <div class="picker__children">
+                        <span>
+                            <label for="children">Children</label>
+                        </span>
+                        <div class="header__people_count">
+                            <button class="minus" value="-">-</button>
+                            <input id="children" type="text" value="0" min="0" max="10">
+                            <button class="plus" value="+">+</button>
+                        </div>
+                    </div>
+                    <div class="picker__rooms">
+                        <span>
+                            <label for="rooms">Rooms</label>
+                        </span>
+                        <div class="header__people_count">
+                            <button class="minus" value="-">-</button>
+                            <input id="rooms" type="text" value="0" min="0" max="30">
+                            <button class="plus" value="+">+</button>
+                        </div>
+                    </div>
+                    <div class="picker__age">
+                        <span>
+                            <label for="age">What is the age of the child you’re travelling
+                                with?</label>
+                        </span>
+                        <select id="age">
+                            <option value="0">0 years old</option>
+                            <option value="1">1 years old</option>
+                            <option value="2">2 years old</option>
+                            <option value="3">3 years old</option>
+                            <option value="4">4 years old</option>
+                            <option value="5">5 years old</option>
+                            <option value="6">6 years old</option>
+                            <option value="7">7 years old</option>
+                            <option value="8">8 years old</option>
+                            <option value="9">9 years old</option>
+                            <option value="10">10 years old</option>
+                            <option value="11">11 years old</option>
+                            <option value="12">12 years old</option>
+                            <option value="13">13 years old</option>
+                            <option value="14">14 years old</option>
+                            <option value="15">15 years old</option>
+                            <option value="16">16 years old</option>
+                            <option value="17">17 years old</option>
+                        </select>
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        </form>
+        <div class="market__links">
+            <p>
+                <img src="./img/svg/google-play-ico.svg" alt="google play market">
+            </p>
+            <p>
+                <img src="./img/svg/Appstore_ico.svg" alt="appStore">
+            </p>
+        </div>
+        </div>
+    </main>
+    <section class="available">
+        <div class="available__wrapper">
+            <div class="available__title">
+                <h2>Available hotels</h2>
+            </div>
+            <div class="slider-buttons-available">
+                <button class="btn-prev-available"></button>
+                <button class="btn-next-available"></button>
+            </div>
+            <div class="available-list__wrapper">
+                <ul class="available__list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommend">
+        <div class="recommend__wrapper">
+            <div class="recommend__title">
+                <h2>Homes guests loves</h2>
+            </div>
+            <div class="slider-buttons">
+                <button class="btn-prev"></button>
+                <button class="btn-next"></button>
+            </div>
+            <div class="recommend-list__wrapper">
+                <ul class="recommend__list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./js/sorter.js"></script>
+    <script type="module" src="./js/slider.js"></script>
+    <script type="module" src="./js/slider_available.js"></script>
+    <script type="module" src="./js/filter.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    
+</body>
+
+</html>
